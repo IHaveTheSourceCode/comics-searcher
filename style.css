@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@700&family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+:root {
+  /* --font-main: ;
+  --font-sub: ; */
+
+  --clr-fill-dark: #2b2b2b;
+  --clr-fill-medium-dark: #212121;
+  --clr-font-main-dark: #ffffff;
+  --clr-font-sub-dark: ;
+
+  --clr-fill-light: ;
+  --clr-font-main-light: ;
+  --clr-font-sub-light: ;
+}
+
+body {
+  height: 300vh;
+  color: var(--clr-font-main-dark);
+}
+
+.header-main {
+  background-image: url("constantine-dark.png");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.header-main > h1 {
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+.header__search-wrapper {
+  display: flex;
+  margin-top: 40px;
+}
+
+.header__search-wrapper,
+.header-main > h1 {
+  margin-right: 5vw;
+}
+
+.header__search-input {
+  width: 540px;
+  height: 48px;
+  padding-left: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--clr-font-main-dark);
+  background-color: var(--clr-fill-dark);
+  border: 1px solid var(--clr-fill-light);
+  border-right: none;
+}
+
+.header__search-button {
+  border: none;
+  width: 120px;
+  height: 52px;
+  font-size: 1.8rem;
+  color: var(--clr-font-main-dark);
+  background-color: var(--clr-fill-dark);
+  border: 1px solid var(--clr-fill-light);
+}
+
+.header__search-input:hover,
+.header__search-input:focus {
+  background-color: var(--clr-font-main-dark);
+  color: var(--clr-fill-dark);
+  border: 1px solid var(--clr-font-main-dark);
+}
+
+.header__search-button:focus,
+.header__search-button:hover {
+  cursor: pointer;
+  color: var(--clr-fill-dark);
+  border: 1px solid var(--clr-font-main-dark);
+  background-color: var(--clr-font-main-dark);
+  border-left: 1px solid var(--clr-fill-dark);
+}
+
+.random-comics {
+  background-color: var(--clr-fill-medium-dark);
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 50px;
+  height: 100%;
+}
+
+.random-comics > h2 {
+  font-size: 5rem;
+  width: 750px;
+  margin-bottom: 3rem;
+  font-weight: normal;
+  font-family: "Noto Sans Mono", monospace;
+  border-bottom: 15px solid white;
+}
+
+.comics-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  gap: 30px;
+}
+
+.comic {
+  display: flex;
+  width: 300px;
+}
+
+.comic-cover {
+  width: 150px;
+}
+
+.comic-description {
+  background-color: var(--clr-font-main-dark);
+  width: 150px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
