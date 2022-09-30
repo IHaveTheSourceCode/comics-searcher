@@ -1,19 +1,19 @@
 import "./style.css";
+import { clearComicsContainer } from "./refresh-comics";
+import { loadData } from "./get-data";
+import { searchComics, addComics, input } from "./inputs";
 
-document.querySelector("#app").innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`;
+for (let i = 0; i < 20; i++) {
+  loadData("Spider-Man", i);
+}
+
+const buttonSearch = document.querySelector(".header__search-button");
+const buttonShowMore = document.querySelector(".show-more-button");
+
+buttonSearch.addEventListener("click", searchComics);
+buttonShowMore.addEventListener("click", addComics);
+input.addEventListener("keydown", function (event) {
+  if (event.keyCode === 13) {
+    buttonSearch.click();
+  }
+});
